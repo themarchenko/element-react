@@ -12,6 +12,7 @@ cd dist/site
 # init an empty git repo, checkout branch gh-pages
 git init
 git remote add origin $ORIGIN
+git push --set-upstream origin main
 git fetch
 git checkout -t origin/gh-pages
 
