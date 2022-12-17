@@ -3,7 +3,9 @@ import { Component } from 'react';
 import { require_condition } from '../utils';
 
 let windowKey = Symbol.for("er_register_map")
-const registerMap = window[windowKey] = window[windowKey] || {
+const w = typeof window === 'undefined' ? {} : window;
+
+const registerMap = w[windowKey] = w[windowKey] || {
   ids: {},
 }
 

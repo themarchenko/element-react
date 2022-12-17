@@ -1,6 +1,10 @@
 let scrollBarWidth;
 
 export function getScrollBarWidth() {
+  if (typeof document === 'undefined') {
+    return null;
+  }
+
   if (scrollBarWidth !== undefined) return scrollBarWidth;
 
   const outer = document.createElement('div');

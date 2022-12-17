@@ -2,7 +2,7 @@
 import * as React from 'react';
 import type { _Column } from "./Types";
 
-const _document = (document: any);
+const _document = ((typeof document === 'object' ? document : {}): any);
 
 let scrollBarWidth: ?number;
 

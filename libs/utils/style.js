@@ -1,4 +1,8 @@
 exports.reset = css => {
+  if (typeof document === 'undefined') {
+    return;
+  }
+
   const style = document.createElement('style');
 
   style.type = 'text/css';

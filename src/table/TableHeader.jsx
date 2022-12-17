@@ -10,7 +10,7 @@ import type {
   _Column,
 } from './Types';
 
-const _document = (document: any);
+const _document = ((typeof document === 'object' ? document : {}): any);
 
 export default class TableHeader extends Component<TableHeaderProps> {
   static contextTypes = {
