@@ -90,7 +90,7 @@ export default class TimeSpinner extends Component {
     this.ajustScrollTop(this.state);
   }
 
-  componentWillReceiveProps(nextProps: any) {
+  UNSAFE_componentWillReceiveProps(nextProps: any) {
     this.setState(propsToState(nextProps), () => {
       this.ajustScrollTop(this.state);
     });

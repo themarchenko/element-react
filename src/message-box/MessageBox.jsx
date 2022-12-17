@@ -121,7 +121,7 @@ export default class MessageBox extends Component {
     });
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { willUnmount, title, showClose, message, showInput, inputPlaceholder, showCancelButton, cancelButtonClass, showConfirmButton, confirmButtonClass, customClass, inputType } = this.props;
     const { visible, editorErrorMessage } = this.state;
 

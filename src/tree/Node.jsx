@@ -184,7 +184,7 @@ export default class Node extends Component {
     this.props.nodeModel.setChecked(checked, true);
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { childNodeRendered } = this.state;
     const { treeNode, nodeModel, renderContent, isShowCheckbox } = this.props;
 

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
 export class MountBody extends Component {
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     let c = React.cloneElement(this.props.children)
     this.tnode = document.createElement('div')
     document.body.appendChild(this.tnode)

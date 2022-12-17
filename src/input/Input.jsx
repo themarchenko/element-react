@@ -105,7 +105,7 @@ export default class Input extends Component {
     });
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { type, size, prepend, append, icon, autoComplete, validating, rows, onMouseEnter, onMouseLeave, trim,
       ...otherProps
     } = this.props;

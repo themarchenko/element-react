@@ -74,7 +74,7 @@ class Cascader extends Component {
     this.input = ReactDOM.findDOMNode(this.refs.input);
   }
 
-  componentWillReceiveProps(props: Object) {
+  UNSAFE_componentWillReceiveProps(props: Object) {
     this.setState({
       currentValue: props.value,
       flatOptions: this.flattenOptions(props.options),

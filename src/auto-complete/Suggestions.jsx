@@ -60,7 +60,7 @@ export default class Suggestions extends Component {
     this.popperJS.destroy();
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { customItem } = this.parent().props;
     const { loading, highlightedIndex } = this.parent().state;
     const { suggestions } = this.props;

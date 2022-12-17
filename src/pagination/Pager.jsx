@@ -115,7 +115,7 @@ export default class Pager extends Component {
     return array;
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const pagers = this.getPages();
     const { currentPage, pageCount } = this.props;
     const { quickprevIconClass, quicknextIconClass } = this.state;

@@ -100,7 +100,7 @@ export default class DateRangePanel extends PopperBase {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this.setState(mapPropsToState(nextProps))
   }
 

@@ -10,7 +10,7 @@ export default class Card extends Component {
     }
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { header, bodyStyle, children } = this.props;
     return (
       <div style={this.style()} className={this.className('el-card')}>

@@ -168,7 +168,7 @@ export default class SliderButton extends Component {
     return this.props.vertical ? { bottom: this.currentPosition() } : { left: this.currentPosition() };
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { hovering, dragging } = this.state;
 
     return (

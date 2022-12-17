@@ -66,7 +66,7 @@ export default class Rate extends Component {
     };
   }
 
-  componentWillReceiveProps(nextProps: Object): void {
+  UNSAFE_componentWillReceiveProps(nextProps: Object): void {
     if (nextProps.value && nextProps.value !== this.props.value) {
       this.setState({
         value: nextProps.value
@@ -255,7 +255,7 @@ export default class Rate extends Component {
     });
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { showText, textColor, disabled, max } = this.props;
     const { hoverIndex } = this.state;
     return (

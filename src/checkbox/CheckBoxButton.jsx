@@ -6,7 +6,7 @@ import CheckBox from './CheckBox';
 export default class CheckboxButton extends CheckBox {
   static elementType = 'CheckboxButton';
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const group = this.context.ElCheckboxGroup;
 
     return (

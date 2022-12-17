@@ -34,7 +34,7 @@ export default class Cover extends Component {
     this.props.onFile(e.dataTransfer.files);
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { dragOver } = this.state;
     return (
       <div

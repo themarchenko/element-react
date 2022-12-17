@@ -29,7 +29,7 @@ export default class Tooltip extends Component {
     }
   }
 
-  componentWillReceiveProps(props: Object) {
+  UNSAFE_componentWillReceiveProps(props: Object) {
     if (props.visible !== this.props.visible) {
       this.setState({
         showPopper: props.visible
@@ -73,7 +73,7 @@ export default class Tooltip extends Component {
     this.popperJS.destroy();
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { effect, content, disabled, transition, visibleArrow } = this.props;
 
     return (

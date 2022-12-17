@@ -51,7 +51,7 @@ export default class TimePanel extends PopperBase {
     this.state = mapPropsToState(props)
   }
 
-  componentWillReceiveProps(nextProps: any) {
+  UNSAFE_componentWillReceiveProps(nextProps: any) {
     this.setState(mapPropsToState(nextProps))
   }
 

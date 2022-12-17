@@ -33,7 +33,7 @@ export default class FilterPannel extends Component<FilterProps, FilterState> {
     document.addEventListener('click', this.handleClickOutside);
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.filteredValue !== nextProps.filteredValue) {
       this.setState({ filteredValue: nextProps.filteredValue })
     }

@@ -24,7 +24,7 @@ export default class Checkbox extends Component {
     };
   }
 
-  componentWillReceiveProps(nextProps: Object): void {
+  UNSAFE_componentWillReceiveProps(nextProps: Object): void {
     this.setState({
       checked: nextProps.checked, focus: nextProps.focus, label: this.getLabel(nextProps)
     })
@@ -87,7 +87,7 @@ export default class Checkbox extends Component {
     }
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     return (
       <label style={this.style()} className={this.className('el-checkbox')}>
         <span className={this.classNames('el-checkbox__input', {

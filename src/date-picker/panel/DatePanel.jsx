@@ -71,7 +71,7 @@ export default class DatePanel extends PopperBase {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     let date = new Date()
     if (nextProps.value){
       date = toDate(nextProps.value)

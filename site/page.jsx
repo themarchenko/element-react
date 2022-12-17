@@ -17,7 +17,7 @@ export default class App extends React.Component {
     this.state = {};
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     window.addEventListener("hashchange", () => {
       window.scrollTo(0, 0);
 

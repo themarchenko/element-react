@@ -170,7 +170,7 @@ export default class Upload extends Component {
     return file && file.status !== 'fail';
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { fileList } = this.state;
     const {
       showFileList,

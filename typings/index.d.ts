@@ -968,6 +968,7 @@ declare namespace ElementReactLibs {
   interface ComponentProps<T> {
     className?: string
     style?: React.CSSProperties
+    children?: React.ReactNode
   }
   class Component<P, S> extends React.Component<P, S> {
     classNames?(...args): any

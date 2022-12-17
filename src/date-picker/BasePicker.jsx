@@ -103,7 +103,7 @@ export default class BasePicker extends Component {
   }
   // ---: end, abstract methods
 
-  componentWillReceiveProps(nextProps: any) {
+  UNSAFE_componentWillReceiveProps(nextProps: any) {
     this.setState(this.propsToState(nextProps))
   }
 

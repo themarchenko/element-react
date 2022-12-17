@@ -197,7 +197,7 @@ export default class FormItem extends Component {
     return temp.length > 1 ? model[temp[0]][temp[1]] : model[this.props.prop];
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { error, validating } = this.state;
     const { label, required } = this.props;
 

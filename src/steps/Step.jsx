@@ -12,7 +12,7 @@ export default class Step extends Component {
     super(props);
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const {
       title,
       icon,

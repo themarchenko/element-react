@@ -51,7 +51,7 @@ export default class TimeSelectPanel extends PopperBase {
     this.scrollToOption()
   }
 
-  componentWillReceiveProps(nextProps: any) {
+  UNSAFE_componentWillReceiveProps(nextProps: any) {
     clearTimeout(this._timer)
     if (nextProps.value !== this.props.value) {
       this._timer = setTimeout(() => this.scrollToOption(), 0)

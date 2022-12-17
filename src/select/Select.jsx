@@ -109,7 +109,7 @@ class Select extends Component {
     addResizeListener(this.refs.root, this.resetInputWidth);
   }
 
-  componentWillReceiveProps(props: Object) {
+  UNSAFE_componentWillReceiveProps(props: Object) {
     if (props.placeholder != this.props.placeholder) {
       this.setState({
         currentPlaceholder: props.placeholder

@@ -21,7 +21,7 @@ export default class Transition extends Component {
     this.didLeave = this.didLeave.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     const children = React.isValidElement(this.props.children) && React.Children.only(this.props.children);
     const nextChildren = React.isValidElement(nextProps.children) && React.Children.only(nextProps.children);
 

@@ -64,7 +64,7 @@ class AutoComplete extends Component {
     };
   }
 
-  componentWillReceiveProps(props: Props): void {
+  UNSAFE_componentWillReceiveProps(props: Props): void {
     this.setState({ inputValue: props.value });
   }
 
@@ -190,7 +190,7 @@ class AutoComplete extends Component {
     }
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { disabled, placeholder, name, size, icon, append, prepend, onIconClick, popperClass } = this.props;
     const { inputValue, suggestions } = this.state;
 

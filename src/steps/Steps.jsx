@@ -48,7 +48,7 @@ export default class Steps extends Component {
     return status;
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { children, space, direction } = this.props;
 
     return (

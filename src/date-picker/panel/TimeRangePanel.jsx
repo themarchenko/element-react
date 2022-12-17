@@ -91,7 +91,7 @@ export default class TimeRangePanel extends PopperBase {
     );
   }
 
-  componentWillReceiveProps(nextProps: any) {
+  UNSAFE_componentWillReceiveProps(nextProps: any) {
     this.setState(mapPropsToState(nextProps));
   }
 

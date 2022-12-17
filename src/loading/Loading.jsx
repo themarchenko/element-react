@@ -57,7 +57,7 @@ export default class Loading extends Component {
     }
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { loading, fullscreen, text } = this.props;
 
     return (

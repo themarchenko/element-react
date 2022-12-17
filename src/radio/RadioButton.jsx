@@ -28,7 +28,7 @@ export default class RadioButton extends Radio {
     };
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     return (
       <label style={this.style()} className={this.className('el-radio-button',
         this.props.size && `el-radio-button--${this.size()}`, {

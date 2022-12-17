@@ -71,7 +71,7 @@ export default class Popover extends Component {
     }
   }
 
-  componentWillReceiveProps(props: Object) {
+  UNSAFE_componentWillReceiveProps(props: Object) {
     if (props.visible !== this.props.visible) {
       this.setState({
         showPopper: props.visible
@@ -118,7 +118,7 @@ export default class Popover extends Component {
     this.popperJS.destroy();
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { transition, popperClass, width, title, content, visibleArrow } = this.props;
 
     return (

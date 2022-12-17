@@ -25,8 +25,8 @@ type Props = {
     disabled: string
   },
   onChange: Function,
-  leftFooter?: React.DOM,
-  rightFooter?: React.DOM
+  leftFooter?: React.ReactNode,
+  rightFooter?: React.ReactNode
 };
 
 type State = {
@@ -135,7 +135,7 @@ export default class Transfer extends Component {
     return data.filter(item => value.includes(item[propsAlias.key]));
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const {
       filterPlaceholder,
       titles,

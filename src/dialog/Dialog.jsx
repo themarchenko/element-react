@@ -31,7 +31,7 @@ export default class Dialog extends Component {
     }
   }
 
-  componentWillReceiveProps(nextProps: Object): void {
+  UNSAFE_componentWillReceiveProps(nextProps: Object): void {
     const { bodyOverflow } = this.state;
     const { lockScroll, modal } = this.props;
     if (this.willOpen(this.props, nextProps)) {
@@ -95,7 +95,7 @@ export default class Dialog extends Component {
     return (prevProps.visible && !nextProps.visible);
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { visible, title, size, top, modal, customClass, showClose, children } = this.props;
 
     return (

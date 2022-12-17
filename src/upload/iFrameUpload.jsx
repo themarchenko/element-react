@@ -95,7 +95,7 @@ export default class IframeUpload extends Component {
     this.setState({ onDrop: false });
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { drag, action, name, accept, listType } = this.props;
     const { frameName } = this.state;
     const classes = this.classNames({

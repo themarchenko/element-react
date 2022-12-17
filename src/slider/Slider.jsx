@@ -50,7 +50,7 @@ export default class Slider extends Component {
     return initValue;
   }
 
-  componentWillMount(): void {
+  componentDidMount(): void {
     const { range, value, min, max, step } = this.props;
     let { firstValue, secondValue, oldValue, inputValue, precision } = this.state;
 
@@ -292,7 +292,7 @@ export default class Slider extends Component {
       : '0%';
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { vertical, showInput, showStops, showInputControls, range, step, disabled, min, max } = this.props;
     const { inputValue, firstValue, secondValue } = this.state;
 

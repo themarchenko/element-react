@@ -37,7 +37,7 @@ export default class Menu extends Component {
     this.openActiveItemMenus();
   }
 
-  componentWillReceiveProps(props: Object) {
+  UNSAFE_componentWillReceiveProps(props: Object) {
     if (props.defaultActive != this.props.defaultActive || props.defaultActive != this.state.activeIndex) {
       this.defaultActiveChanged(props.defaultActive);
     }
@@ -147,7 +147,7 @@ export default class Menu extends Component {
     });
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     return (
       <ul
         style={this.style()}

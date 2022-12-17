@@ -31,7 +31,7 @@ export default class CarouselItem extends Component {
     };
   }
 
-  componentWillMount(): void {
+  componentDidMount(): void {
     this.parent().addItem(this);
   }
 

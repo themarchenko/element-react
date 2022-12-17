@@ -8,7 +8,7 @@ export default class UploadList extends Component {
     super(props);
   }
 
-  uploadList(): ?React.DOM {
+  uploadList(): ?React.ReactNode {
     const { onPreview, onRemove } = this.context;
     const { listType, fileList } = this.props;
     const isFinished = status => status === 'success';
@@ -91,7 +91,7 @@ export default class UploadList extends Component {
     )
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     return (
       <Transition name="list">{ this.uploadList() }</Transition>
     )

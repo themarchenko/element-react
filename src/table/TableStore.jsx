@@ -118,7 +118,7 @@ export default class TableStore extends Component<TableStoreProps, TableStoreSta
     this._isMounted = true;
   }
 
-  componentWillReceiveProps(nextProps: TableStoreProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: TableStoreProps) {
     const { data } = this.props;
     const nextColumns = getColumns(nextProps);
 

@@ -4,7 +4,7 @@ import React from 'react';
 import { Component, PropTypes, View } from '../../libs';
 
 type Props = {
-  children: React.DOM,
+  children: React.ReactNode,
   type: 'card' | 'border-card',
   activeName: string,
   value: string,
@@ -62,7 +62,7 @@ export default class Tabs extends Component {
     }
   }
 
-  componentWillReceiveProps(nextProps: Props): void {
+  UNSAFE_componentWillReceiveProps(nextProps: Props): void {
     if (nextProps.activeName !== this.props.activeName) {
       this.setState({
         currentName: nextProps.activeName,
@@ -92,7 +92,7 @@ export default class Tabs extends Component {
     onTabAdd && onTabAdd();
   }
 
-  handleTabRemove(tab: React.DOM, index: number, e: SyntheticEvent<any>): void {
+  handleTabRemove(tab: React.ReactNode, index: number, e: SyntheticEvent<any>): void {
     const { children, currentName } = this.state;
     const { onTabRemove, onTabEdit } = this.props;
 
@@ -117,7 +117,7 @@ export default class Tabs extends Component {
     });
   }
 
-  handleTabClick(tab: React.DOM, e: SyntheticEvent<any>): void | boolean {
+  handleTabClick(tab: React.ReactNode, e: SyntheticEvent<any>): void | boolean {
     if (tab.props.disabled) {
       return false;
     }
@@ -255,7 +255,7 @@ export default class Tabs extends Component {
     }
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { children, currentName, barStyle, navStyle, scrollable, scrollNext, scrollPrev } = this.state;
     const { type, addable, closable, editable } = this.props;
     const tabsCls = this.classNames({

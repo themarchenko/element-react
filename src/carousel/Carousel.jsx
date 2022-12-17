@@ -216,7 +216,7 @@ export default class Carousel extends Component {
     return false;
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { height, arrow, indicatorPosition } = this.props;
     const { hover, activeIndex, items } = this.state;
     return (

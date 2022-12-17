@@ -21,7 +21,7 @@ export default class Radio extends Component {
     };
   }
 
-  componentWillReceiveProps(props: Object) {
+  UNSAFE_componentWillReceiveProps(props: Object) {
     const checked = this.getChecked(props);
 
     if (this.state.checked != checked) {
@@ -57,7 +57,7 @@ export default class Radio extends Component {
     return props.model == props.value || Boolean(props.checked)
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { checked, focus } = this.state;
     const { disabled, value, children } = this.props;
 

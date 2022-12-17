@@ -111,7 +111,7 @@ export default class AjaxUpload extends Component {
     }
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { drag, multiple, accept, listType, disabled } = this.props;
     return (
       <div

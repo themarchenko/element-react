@@ -94,7 +94,7 @@ export default class HueSlider extends Component {
     });
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { vertical } = this.props;
     const { thumbLeft, thumbTop } = this.state;
     return (

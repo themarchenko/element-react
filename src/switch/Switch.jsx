@@ -32,7 +32,7 @@ export default class Switch extends Component {
     this.updateSwitch();
   }
 
-  componentWillReceiveProps(props: Object) {
+  UNSAFE_componentWillReceiveProps(props: Object) {
     this.setState({ value: props.value }, () => {
       this.updateSwitch();
     });

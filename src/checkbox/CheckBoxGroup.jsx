@@ -18,7 +18,7 @@ export default class CheckboxGroup extends Component {
     };
   }
 
-  componentWillReceiveProps(nextProps: Object): void {
+  UNSAFE_componentWillReceiveProps(nextProps: Object): void {
     if (nextProps.value !== this.props.value) {
       this.setState({
         options: nextProps.value
@@ -50,7 +50,7 @@ export default class CheckboxGroup extends Component {
     }
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { options } = this.state;
 
     const children = React.Children.map(this.props.children, (child, index) => {

@@ -136,7 +136,7 @@ export default class Pagination extends Component {
     };
   }
 
-  componentWillReceiveProps(nextProps: Object): void {
+  UNSAFE_componentWillReceiveProps(nextProps: Object): void {
     const { currentPage, pageSizes, pageSize, total, pageCount } = this.props;
 
     if (
@@ -299,7 +299,7 @@ export default class Pagination extends Component {
     }
   }
 
-  render(): ?React.DOM {
+  render(): ?React.ReactNode {
     const { internalCurrentPage, internalPageSize } = this.state;
 
     const className = this.classNames({

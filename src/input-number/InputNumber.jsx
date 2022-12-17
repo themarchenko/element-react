@@ -23,7 +23,7 @@ export default class InputNumber extends Component {
     };
   }
 
-  componentWillReceiveProps(props: Object) {
+  UNSAFE_componentWillReceiveProps(props: Object) {
     if (props.value != this.props.value) {
       this.setState({ value: props.value });
     }
@@ -137,7 +137,7 @@ export default class InputNumber extends Component {
     }
   }
 
-  render(): React.DOM {
+  render(): React.ReactNode {
     const { controls, disabled, size } = this.props;
     const { value, inputActive } = this.state;
 

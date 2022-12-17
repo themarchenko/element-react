@@ -22,9 +22,10 @@ export default class Option extends Component {
     }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.parent().onOptionCreate(this);
 
+    // eslint-disable-next-line react/no-did-mount-set-state
     this.setState({
       index: this.parent().state.options.indexOf(this)
     });
